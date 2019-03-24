@@ -1,0 +1,121 @@
+{
+  "command": "/start",
+  "name": "Run",
+  "parent": null,
+  "steps": [
+    {
+      "command": "/notification",
+      "name": "Send notification",
+      "parent": "/run",
+      "steps": [
+        {
+          "command": "/wfh",
+          "name": "Work from fome",
+          "parent": "/notification",
+          "steps": [
+            {
+              "command": "/back",
+              "name": "Back",
+              "parent": "/wfh",
+              "steps": null
+            },
+            {
+              "command": "/mailTo",
+              "name": "Send",
+              "parent": "/wfh",
+              "steps": null
+            }
+          ]
+        },
+        {
+          "command": "/ooo",
+          "name": "Out of office",
+          "parent": "/notification",
+          "steps": [
+            {
+              "command": "/back",
+              "name": "Back",
+              "parent": "/ooo",
+              "steps": null
+            },
+            {
+              "command": "/mailTo",
+              "name": "Send",
+              "parent": "/ooo",
+              "steps": null
+            }
+          ]
+        },
+        {
+          "command": "/sickness",
+          "name": "Sickness",
+          "parent": "/notification",
+          "steps": [
+            {
+              "command": "/back",
+              "name": "Back",
+              "parent": "/ooo",
+              "steps": null
+            },
+            {
+              "command": "/mailTo",
+              "name": "Send",
+              "parent": "/ooo",
+              "steps": null
+            }
+          ]
+        },
+        {
+          "command": "/beingLate",
+          "name": "Being Late",
+          "parent": "/notification",
+          "steps": [
+            {
+              "command": "/back",
+              "name": "Back",
+              "parent": "/ooo",
+              "steps": null
+            },
+            {
+              "command": "/mailTo",
+              "name": "Send",
+              "parent": "/ooo",
+              "steps": null
+            }
+          ]
+        },
+        {
+          "command": "/leavingEarly",
+          "name": "Leaving Early",
+          "parent": "/notification",
+          "steps": [
+            {
+              "command": "/back",
+              "name": "Back",
+              "parent": "/ooo",
+              "steps": null
+            },
+            {
+              "command": "/mailTo",
+              "name": "Send",
+              "parent": "/ooo",
+              "steps": null
+            }
+          ]
+        },
+        {
+          "command": "/back",
+          "parent": "/notification",
+          "name": "Back",
+          "steps": null
+        }
+      ]
+    },
+    {
+      "command": "/lunch",
+      "name": "Order lunch",
+      "parent": "/run",
+      "steps": null
+    }
+  ]
+}
